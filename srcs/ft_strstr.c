@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 20:45:48 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/17 20:56:40 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/17 21:36:36 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/17 21:52:15 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char *ft_strstr(const char *haystack, const char *needle)
 {
-	char a;
+	char *pepis;
+	char *vag;
 
-	a = (char)c;
-	while (*s)
+	while (*haystack)
 	{
-		if (*s == a)
-			return ((char*)s);
-		s++;
+		if (*haystack == *needle)
+		{
+			pepis = (char*)needle;
+			vag = (char*)haystack;
+			while (*pepis == *vag)
+			{
+				pepis++;
+				vag++;
+				if (*pepis == '\0')
+					return (vag);
+			}
+		}
+		haystack++;
 	}
-	if (a == *s)
-		return ((char*)s);
 	return (0);
 }
