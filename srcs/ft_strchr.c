@@ -1,36 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/15 18:02:20 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/17 20:45:15 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/17 20:45:48 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/17 20:48:13 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t  ft_strlcat(char *dst, const char *src, size_t size)
+char *strchr(const char *s, int c)
 {
-	size_t  dstlen;
-	size_t  srclen;
-
-	dstlen = 0;
-	while ((*dst) && (size))
-	{
-		dst++;
-		dstlen++;
-		size--;
-	}
-	srclen = ft_strlen(src);
-	while (*src && (size > 1))
-	{
-		*dst++ = *src++;
-		size--;
-	}
-	if ((size == 1) || (!(*src)))
-		*dst = '\0';
-	return (srclen + dstlen);
+	return ();
 }
