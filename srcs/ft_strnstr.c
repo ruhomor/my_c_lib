@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 21:36:36 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/19 18:42:56 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/19 18:44:20 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/19 19:15:46 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_cmp(const char *hs, const char *n)
+#include <stdlib.h>
+
+int	ft_cmpl(const char *hs, const char *n, size_t len)
 {
-	while ((*n) && (*hs == *n))
+	while ((*n) && (*hs == *n) && (len--))
 	{
 		hs++;
 		n++;
@@ -22,16 +24,17 @@ int	ft_cmp(const char *hs, const char *n)
 	return (0);
 }
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	if (*needle == '\0')
 		return ((char*)haystack);
-	while (*haystack)
+	while ((*haystack) && (len))
 	{
 		if (*needle == *haystack)
-			if (ft_cmp(haystack, needle))
+			if (ft_cmpl(haystack, needle, len))
 				return ((char*)haystack);
 		haystack++;
+		len--;
 	}
-	return (0);
+	return (NULL);
 }

@@ -1,37 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 21:36:36 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/19 18:42:56 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/19 20:07:07 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/19 21:04:50 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_cmp(const char *hs, const char *n)
+int	ft_isdigit(int c)
 {
-	while ((*n) && (*hs == *n))
-	{
-		hs++;
-		n++;
-	}
-	if (*n == '\0')
+	if ((c == '0') || (c == '1') || (c == '2') || (c == '3') || (c == '4')
+		|| (c == '5') || (c == '6') || (c == '7') || (c == '8') || (c == '9'))
 		return (1);
-	return (0);
-}
-
-char	*ft_strstr(const char *haystack, const char *needle)
-{
-	if (*needle == '\0')
-		return ((char*)haystack);
-	while (*haystack)
-	{
-		if (*needle == *haystack)
-			if (ft_cmp(haystack, needle))
-				return ((char*)haystack);
-		haystack++;
-	}
 	return (0);
 }
