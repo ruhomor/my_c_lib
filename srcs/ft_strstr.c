@@ -10,25 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strstr(const char *haystack, const char *needle)
+int	ft_cmp(const char *hs, const char *n)
 {
-	char *pepis;
-	char *vag;
+	while ((*n) && (*hs == *n))
+	{
+		hs++;
+		n++;
+	}
+	if (*n == '\0')
+		return (1);
+	return (0);
+}
 
+char	*ft_strstr(const char *haystack, const char *needle)
+{
+	if (*needle == '\0')
+		return (0);
 	while (*haystack)
 	{
-		if (*haystack == *needle)
-		{
-			pepis = (char*)needle;
-			vag = (char*)haystack;
-			while (*pepis == *vag)
-			{
-				pepis++;
-				vag++;
-				if (*pepis == '\0')
-					return (vag);
-			}
-		}
+		if (*needle == *haystack)
+			if (ft_cmp(haystack, needle))
+				return ((char*)haystack);
 		haystack++;
 	}
 	return (0);
