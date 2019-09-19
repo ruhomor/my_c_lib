@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 20:54:34 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/17 21:53:18 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/19 21:04:30 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@
 
 # include <stdlib.h>
 
-char	*strstr(const char *haystack, const char *needle);
+int		ft_isdigit(int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 void	ft_bzero(void *s, size_t n);
@@ -33,5 +37,6 @@ char    *ft_strncpy(char *dst, const char *src, size_t len);
 char    *ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 size_t  strlcat(char *dst, const char *src, size_t size);
+int		ft_atoi(const char *str);
 
 #endif

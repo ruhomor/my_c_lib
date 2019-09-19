@@ -6,7 +6,7 @@
 #    By: kachiote <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/09 21:02:57 by kachiote          #+#    #+#              #
-#    Updated: 2019/09/17 21:52:40 by kachiote         ###   ########.fr        #
+#    Updated: 2019/09/19 21:02:39 by kachiote         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,12 @@ FUNCS = ft_memset \
 		ft_strlcat \
 		ft_strchr \
 		ft_strrchr \
-		ft_strstr
+		ft_strstr \
+		ft_strnstr \
+		ft_strcmp \
+		ft_strncmp \
+		ft_isdigit \
+		ft_atoi
 
 SRCS = $(patsubst %, ./srcs/%.c, $(FUNCS))
 
