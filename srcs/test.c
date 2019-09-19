@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 20:04:29 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/19 22:15:06 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/19 22:40:02 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,21 @@ int	ft_isspace(int c)
 	return (0);
 }
 
+unsigned int poww(unsigned int a, unsigned int b)
+{
+	unsigned int c;
+
+	c = 1;
+	while (b--)
+		c *= a;
+	return (c);
+}
+
 int	ft_atoi(const char *str)
 {
-	short int	sign;
-	short int	longoverflow;
-	long int	res;
+	short int		sign;
+	long long int	res;
 
-	longoverflow = 0;
 	res = 0;
 	sign = -1;
 	while ((*str) && ((ft_isspace(*str))) && (*str != '-') && (*str != '+'))
@@ -65,15 +73,6 @@ int	ft_atoi(const char *str)
 	{
 		res = res * 10 - (*str - '0');
 		str++;
-		if (((sign == 1) && (res < 0)) || ((sign == -1) && (res > 0)))
-			longoverflow = 1;
-	}
-	if (longoverflow)
-	{
-		if (sign == 1)
-			return (0);
-		else
-			return (-1);
 	}
 	return ((int)(res * sign));
 }
