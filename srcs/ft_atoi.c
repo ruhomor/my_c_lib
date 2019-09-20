@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 20:04:29 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/19 22:01:59 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/20 18:49:00 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_isspace(int c)
 int	ft_atoi(const char *str)
 {
 	short int	sign;
-	long int	res;
+	int			res;
 
 	res = 0;
 	sign = -1;

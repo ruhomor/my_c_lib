@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 20:54:34 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/19 21:04:30 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/20 20:22:10 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 
 # include <stdlib.h>
 
+void	ft_memdel(void **ap);
+void	*ft_memalloc(size_t size);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_isprint(int c);
+int		ft_isascii(int c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
