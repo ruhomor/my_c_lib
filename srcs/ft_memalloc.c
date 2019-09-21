@@ -17,7 +17,7 @@ void	*ft_memalloc(size_t size)
 	void *suka;
 	if (!(suka = malloc(size)))
 		return (NULL);
-	suka = ft_memset(suka, 0, size);
+	suka = ft_memset(suka, '\0', size);
 	return (suka);
 
 }

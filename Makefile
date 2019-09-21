@@ -41,7 +41,9 @@ FUNCS = ft_memset \
 		ft_toupper \
 		ft_tolower \
 		ft_memalloc \
-		ft_memdel
+		ft_memdel \
+		ft_strnew \
+		ft_strdel
 
 SRCS = $(patsubst %, ./srcs/%.c, $(FUNCS))
 
