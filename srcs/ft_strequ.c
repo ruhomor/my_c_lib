@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/22 12:04:37 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/22 12:06:33 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/22 14:51:02 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/22 15:15:32 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int ft_strequ(char const *s1, char const *s2)
 {
-	ft_memdel((void**)as);
+	if (s1 && s2 && (!(ft_strcmp(s1, s2))))
+		return (1);
+	return (0);
 }

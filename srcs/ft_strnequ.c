@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/22 12:04:37 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/22 12:06:33 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/22 15:33:08 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/22 15:35:52 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int	ft_strnequ(char const *s1,char const *s2, size_t n)
 {
-	ft_memdel((void**)as);
+	if (s1 && s2 && (!(ft_strncmp(s1, s2, n))))
+		return (1);
+	return (0);
 }

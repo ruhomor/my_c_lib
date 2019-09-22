@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 20:54:34 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/20 20:22:10 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/22 16:23:35 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,20 @@ char    *ft_strcpy(char *dst, const char *src);
 char    *ft_strncpy(char *dst, const char *src, size_t len);
 char    *ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
-size_t  strlcat(char *dst, const char *src, size_t size);
+size_t  ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_atoi(const char *str);
 char	*ft_strnew(size_t);
 void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s,char(*f)(char));
+char	*ft_strmapi(char const *s,char (*f)(unsigned int, char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+int		ft_isspace(char c);
 
 #endif

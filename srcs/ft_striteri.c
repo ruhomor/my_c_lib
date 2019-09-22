@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/22 12:04:37 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/22 12:06:33 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/22 12:35:49 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/22 12:39:55 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_strdel(char **as)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	ft_memdel((void**)as);
+	unsigned int	i;
+
+	if (s && f && *f)
+	{
+		i = 0;
+		while(*s)
+			(*f)(i++, s++);
+	}
 }

@@ -6,7 +6,7 @@
 #    By: kachiote <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/09 21:02:57 by kachiote          #+#    #+#              #
-#    Updated: 2019/09/20 20:22:29 by kachiote         ###   ########.fr        #
+#    Updated: 2019/09/22 16:24:03 by kachiote         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,18 @@ FUNCS = ft_memset \
 		ft_memalloc \
 		ft_memdel \
 		ft_strnew \
-		ft_strdel
+		ft_strdel \
+		ft_strclr \
+		ft_striter \
+		ft_striteri \
+		ft_strmap \
+		ft_strmapi \
+		ft_strequ \
+		ft_strnequ \
+		ft_strsub \
+		ft_strjoin \
+		ft_strtrim \
+		ft_isspace
 
 SRCS = $(patsubst %, ./srcs/%.c, $(FUNCS))
 

@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/22 12:04:37 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/22 12:06:33 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/22 15:58:57 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/22 16:03:25 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	ft_memdel((void**)as);
+	char	*res;
+	char	*mem;
+
+	if ((s1) && (s2) && (res = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+	{
+		mem = res;
+		while (*s1)
+			*mem++ = *s1++;
+		while (*s2)
+			*mem++ = *s2++;
+		*mem = '\0';
+		return (res);
+	}
+	return (NULL);
 }

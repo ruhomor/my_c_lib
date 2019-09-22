@@ -1,18 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/22 12:04:37 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/22 12:06:33 by kachiote         ###   ########.fr       */
+/*   Created: 2019/09/22 16:19:37 by kachiote          #+#    #+#             */
+/*   Updated: 2019/09/22 16:28:45 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+char	*ft_strtrim(char const *s)
 {
-	ft_memdel((void**)as);
+	char	*res;
+	char	*ends;
+	char	*mem;
+
+	if (s)
+	{
+		ends = (char*)s;
+		while (*ends)
+			ends++;
+		ends--;
+		while (ft_iswhitespace(*ends))
+			ends--;
+		while (ft_iswhitespace(*s))
+			s++;
+		if (!(res = ft_strnew(ends - s)))
+			return (NULL);
+		mem = res;
+		while (s != ends)
+			*mem++ = *s++;
+		return (res);
+	}
+	return (NULL);
 }
