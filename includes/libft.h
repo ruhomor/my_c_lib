@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 20:54:34 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/22 16:23:35 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/22 20:37:58 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 int		ft_isspace(char c);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif
