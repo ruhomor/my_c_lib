@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 20:54:34 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/22 20:37:58 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/22 22:24:21 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,10 @@ char	*ft_strtrim(char const *s);
 int		ft_isspace(char c);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
-
+void	ft_putchar_fd(char c, int fd);
+void	ft_putchar(char c);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putstr(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putendl(char const *s);
 #endif
