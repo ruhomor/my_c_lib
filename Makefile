@@ -6,7 +6,7 @@
 #    By: kachiote <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/09 21:02:57 by kachiote          #+#    #+#              #
-#    Updated: 2019/09/22 22:24:41 by kachiote         ###   ########.fr        #
+#    Updated: 2019/09/23 17:41:07 by kachiote         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,15 @@ FUNCS = ft_memset \
 		ft_putstr_fd \
 		ft_putstr \
 		ft_putendl_fd \
-		ft_putendl
+		ft_putendl \
+		ft_putnbr_fd \
+		ft_putnbr \
+		ft_lstnew \
+		ft_lstdelone \
+		ft_lstdel \
+		ft_lstadd \
+		ft_lstiter \
+		ft_lstmap
 
 SRCS = $(patsubst %, ./srcs/%.c, $(FUNCS))
 
