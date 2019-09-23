@@ -6,16 +6,11 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 19:45:49 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/20 19:53:10 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/23 21:13:16 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_islowercase(int c)
-{
-	if ((c >= 'a') && (c <= 'z'))
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,13 +6,13 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 22:29:11 by kachiote          #+#    #+#             */
-/*   Updated: 2019/09/23 15:24:22 by kachiote         ###   ########.fr       */
+/*   Updated: 2019/09/23 20:36:35 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_abs(int n)
+int		ft_absolute(int n)
 {
 	if (n < 0)
 		return (-n);
@@ -57,7 +57,7 @@ void	ft_putnbr_fd(int n, int fd)
 		while (n)
 		{
 			divisor = ft_pow10(len--);
-			ft_putchar_fd(abs(n / divisor) + '0', fd);
+			ft_putchar_fd(ft_absolute(n / divisor) + '0', fd);
 			n %= divisor;
 		}
 		len++;

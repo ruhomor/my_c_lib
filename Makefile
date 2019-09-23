@@ -6,7 +6,7 @@
 #    By: kachiote <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/09 21:02:57 by kachiote          #+#    #+#              #
-#    Updated: 2019/09/23 17:41:07 by kachiote         ###   ########.fr        #
+#    Updated: 2019/09/23 21:13:55 by kachiote         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ FUNCS = ft_memset \
 		ft_bzero \
 		ft_memcpy \
 		ft_memccpy \
+		ft_backwardsmemcpy \
 		ft_memmove \
 		ft_memchr \
 		ft_memcmp \
@@ -38,6 +39,8 @@ FUNCS = ft_memset \
 		ft_isalnum \
 		ft_isascii \
 		ft_isprint \
+		ft_isupper \
+		ft_islowercase \
 		ft_toupper \
 		ft_tolower \
 		ft_memalloc \
