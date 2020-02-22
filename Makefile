@@ -10,6 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+CC = gcc
+
 NAME = libft.a
 
 FUNCS = ft_memset \
@@ -76,7 +78,8 @@ FUNCS = ft_memset \
 		ft_lstmap \
 		ft_writenbr \
 		ft_countwords \
-		ft_deldel
+		ft_deldel \
+		get_next_line
 
 SRCS = $(patsubst %, %.c, $(FUNCS))
 
@@ -89,7 +92,7 @@ FLAGS = -Werror -Wextra -Wall
 all: $(NAME)
 
 %.o:%.c -I$(INCL)
-	@gcc $(FLAGS) $(INCL) $< -o $@
+	@$(CC) $(FLAGS) $(INCL) $< -o $@
 
 $(NAME): $(OUT)
 	@ar rc $(NAME) $(OUT)
