@@ -6,7 +6,7 @@
 /*   By: kachiote <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 13:52:30 by kachiote          #+#    #+#             */
-/*   Updated: 2019/11/18 16:09:09 by kachiote         ###   ########.fr       */
+/*   Updated: 2020/03/04 07:29:20 by kachiote         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_ldb		*create_db(const int fd)
 	db->fd = fd;
 	db->cut = ft_strnew(BUFF_SIZE);
 	db->next = NULL;
-	return(db);
+	return (db);
 }
 
 char		*search_n(char **n, char *cut)
@@ -44,10 +44,10 @@ char		*search_n(char **n, char *cut)
 
 int			readline(const int fd, char **line, char *cut)
 {
-	char			buf[BUFF_SIZE + 1];
-	char			*n;
-	char			*tmp;
-	int			bytes;
+	char	buf[BUFF_SIZE + 1];
+	char	*n;
+	char	*tmp;
+	int		bytes;
 
 	n = NULL;
 	bytes = 1;
@@ -70,7 +70,7 @@ int			readline(const int fd, char **line, char *cut)
 	return (0);
 }
 
-t_ldb			*search_db(t_ldb *db, const int fd)
+t_ldb		*search_db(t_ldb *db, const int fd)
 {
 	t_ldb	*data;
 
@@ -81,7 +81,7 @@ t_ldb			*search_db(t_ldb *db, const int fd)
 			data->next = create_db(fd);
 		data = data->next;
 	}
-	return(data);
+	return (data);
 }
 
 int			get_next_line(const int fd, char **line)
@@ -92,5 +92,5 @@ int			get_next_line(const int fd, char **line)
 		return (-1);
 	if (!db)
 		db = create_db(fd);
-	return(readline(fd, line, search_db(db, fd)->cut));
+	return (readline(fd, line, search_db(db, fd)->cut));
 }
