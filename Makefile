@@ -69,7 +69,9 @@ FUNCS = ft_memset \
 		ft_putendl_fd \
 		ft_putendl \
 		ft_putnbr_fd \
+		ft_putunbr_fd \
 		ft_putnbr \
+		ft_putunbr \
 		ft_lstnew \
 		ft_lstdelone \
 		ft_lstdel \
